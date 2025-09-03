@@ -167,4 +167,7 @@ if (is_plugin_active('woocommerce/woocommerce.php')) {
 	require_once('woocommerce/mh-custom-woocommerce.php');
 }
 
+add_filter( 'wp_image_editors', function() {
+    return [ 'WP_Image_Editor_GD', 'WP_Image_Editor_Imagick' ];
+});
 ?>
